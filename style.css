@@ -1,66 +1,217 @@
-@import url(https://fonts.google.com/specimen/Roboto#standard-styles);
-* {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body {
-    margin: 0;
-}
-
-#logo img {
-    width: 150px;
-    margin-bottom: 10px;
-}
-
-#logo {
-    text-align: center;
-    margin-top: 10px;
-}
-
-#localisation {
-    width: auto;
-    height: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    background-color: #f0ecec;
-    -webkit-box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
-    -moz-box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
-    box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
-    padding-left: 5px;
-}
-
-#localisation p {
-    margin: 0px 0px 0px 12px;
-    font-weight: bold;
-}
-
-#description {
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#description h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    margin: 15px 0 10px 0;
-}
-
-#description>p {
-    margin: 20px 0 10px 0;
-}
-
-#carte img {
-    width: 323px;
-    height: 216px;
-}
-
-#footer img {
-    width: 323px;
-}
+    @import url(https://fonts.google.com/specimen/Roboto#standard-styles);
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        height: 100%;
+    }
+    
+    #logo img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    
+    #logo {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    #localisation {
+        width: auto;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        background-color: lightgray;
+        -webkit-box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
+        -moz-box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
+        box-shadow: 0px -3px 3px 0px rgba(108, 110, 108, 0.47);
+        padding-left: 5px;
+    }
+    
+    #localisation p {
+        margin: 0px 0px 0px 12px;
+        font-weight: 500;
+    }
+    
+    #description {
+        background-color: #f4f4f4;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+    }
+    
+    #description h3 {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    #description p {
+        text-align: center;
+        font-size: 17px;
+    }
+    
+    #description p:nth-child(3) {
+        width: 100%;
+        color: white;
+        margin: 15px 55px 15px 55px;
+        padding: 15px;
+        -webkit-box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.55);
+        box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.55);
+        border: hidden rgba(147, 86, 220, 0.65);
+        border-radius: 25px;
+        background: rgb(255, 121, 218);
+        background: rgb(255, 121, 218);
+        background: -moz-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
+        background: -webkit-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
+        background: linear-gradient(135deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
+    }
+    
+    #fonctionnement h2 {
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    
+    #fonctionnement li {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0.5rem;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        margin-right: 20px;
+        counter-increment: list;
+        list-style: none;
+        border: 5px hidden #1C6EA4;
+        border-radius: 27px;
+        -webkit-box-shadow: 1px 7px 15px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 1px 7px 15px 5px rgba(0, 0, 0, 0.3);
+        background-color: #ebe3e3a2;
+    }
+    
+    #fonctionnement li:last-child {
+        background-color: rgba(223, 216, 233, 255);
+    }
+    
+    .fas.fa-mobile-alt {
+        color: grey;
+        font-size: 20px;
+        width: 35px;
+    }
+    
+    .fas.fa-list-ul {
+        color: grey;
+        font-size: 20px;
+        width: 35px
+    }
+    
+    .fas.fa-store {
+        width: 35px;
+        font-size: 20px;
+        color: #9356DC;
+    }
+    
+    #fonctionnement li::before {
+        content: counter(list);
+        border: 2px solid #9356DC;
+        background-color: #9356DC;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        padding: 0.1rem 0.5rem;
+        color: white;
+    }
+    
+    #carte {
+        background-color: #ebe3e3a2;
+        padding-top: 25px;
+        margin-top: 60px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    #carte h2 {
+        margin-left: 20px;
+    }
+    
+    #carte img {
+        width: 335px;
+        height: 216px;
+        border-radius: 15px;
+    }
+    
+    .menu {
+        background-color: white;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    #carte a {
+        text-decoration: none;
+        color: initial;
+    }
+    
+    #carte h4 {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 12px 0 5px 12px;
+    }
+    
+    #carte p {
+        margin: 10px 150px 5px 12px;
+        font-size: 17px;
+        padding-bottom: 15px;
+        width: 106.031px;
+    }
+    
+    #carte .far.fa-heart {
+        font-size: 28px;
+        border-radius: 50%;
+    }
+    
+    .menu div {
+        margin: 0%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 25px;
+        flex-direction: row-reverse;
+    }
+    
+    #footer {
+        background-color: #1c1f1d;
+        padding: 20px 0 20px 20px;
+    }
+    
+    #footer li {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5px;
+    }
+    
+    #footer i {
+        color: white;
+        width: 20px;
+    }
+    
+    #footer img {
+        width: 120px;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(305deg) brightness(101%) contrast(101%);
+        padding-bottom: 20px;
+    }
+    
+    #footer p {
+        color: white;
+        margin: 0;
+    }
+    
+    .info {
+        padding-left: 10px;
+    }
