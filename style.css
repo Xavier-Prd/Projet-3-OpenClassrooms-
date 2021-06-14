@@ -171,6 +171,11 @@
         width: 106.031px;
     }
     
+    #carte span {
+        background-color: #99E2D0;
+        color: green;
+    }
+    
     #carte .far.fa-heart {
         font-size: 28px;
         border-radius: 50%;
