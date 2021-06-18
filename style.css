@@ -66,8 +66,6 @@
         box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.55);
         border: hidden rgba(147, 86, 220, 0.65);
         border-radius: 25px;
-        background: rgb(255, 121, 218);
-        background: rgb(255, 121, 218);
         background: -moz-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: -webkit-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: linear-gradient(135deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
@@ -94,27 +92,28 @@
         -webkit-box-shadow: 1px 7px 15px 5px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 7px 15px 5px rgba(0, 0, 0, 0.3);
         background-color: #ebe3e3a2;
+        animation: fade-up 500ms ease-out;
     }
     
     #fonctionnement li:last-child {
         background-color: rgba(223, 216, 233, 255);
     }
     
-    .fas.fa-mobile-alt {
-        color: grey;
-        font-size: 20px;
-        width: 35px;
+    #fonctionnement .fas {
+        text-align: center;
+        display: inline-block;
+        transform: translateY(12.5%);
     }
     
-    .fas.fa-list-ul {
+    .fas.fa-list-ul,
+    .fas.fa-mobile-alt,
+    .fas.fa-store {
         color: grey;
         font-size: 20px;
         width: 35px
     }
     
     .fas.fa-store {
-        width: 35px;
-        font-size: 20px;
         color: #9356DC;
     }
     
@@ -123,9 +122,10 @@
         border: 2px solid #9356DC;
         background-color: #9356DC;
         border-radius: 50%;
-        margin-right: 0.5rem;
         padding: 0.1rem 0.5rem;
         color: white;
+        display: inline-block;
+        transform: translateX(-50%);
     }
     
     #carte {
@@ -153,6 +153,15 @@
         border-radius: 15px;
     }
     
+    .menu-image {
+        position: relative;
+        padding: 0;
+    }
+    
+    .menu-texte {
+        position: relative;
+    }
+    
     #carte a {
         text-decoration: none;
         color: initial;
@@ -165,28 +174,40 @@
     }
     
     #carte p {
-        margin: 10px 150px 5px 12px;
+        margin: 0px 0px 5px 12px;
         font-size: 17px;
         padding-bottom: 15px;
-        width: 106.031px;
+        width: 150px;
     }
     
     #carte span {
         background-color: #99E2D0;
         color: green;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        padding: 5px 8px;
+        text-align: center;
+        font-weight: 500;
     }
     
-    #carte .far.fa-heart {
+    #carte .fas.fa-heart {
         font-size: 28px;
-        border-radius: 50%;
+        font-weight: 100;
+        position: absolute;
+        right: 30px;
+        top: 10px;
+    }
+    
+    #carte .fas.fa-heart:hover {
+        font-weight: 900;
+        background: linear-gradient(180deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     
     .menu div {
         margin: 0%;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 25px;
-        flex-direction: row-reverse;
     }
     
     #footer {
