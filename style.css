@@ -1,6 +1,7 @@
-    @import url(https://fonts.google.com/specimen/Roboto#standard-styles);
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     * {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
     
     body {
@@ -9,13 +10,14 @@
     }
     
     #logo img {
-        width: 150px;
+        width: 160px;
         margin-bottom: 10px;
     }
     
     #logo {
-        text-align: center;
         margin-top: 10px;
+        text-align: center;
+        position: relative;
     }
     
     #localisation {
@@ -227,6 +229,10 @@
         width: 20px;
     }
     
+    #footer ul {
+        padding: 0;
+    }
+    
     #footer img {
         width: 120px;
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(305deg) brightness(101%) contrast(101%);
@@ -240,4 +246,141 @@
     
     .info {
         padding-left: 10px;
+    }
+    /* --------------------------------------------------------------------------------------------- */
+    /* css pages menu */
+    
+    #logo i {
+        font-size: 20px;
+        position: absolute;
+        left: 20px;
+        top: 2px;
+    }
+    
+    #logo a {
+        text-decoration: none;
+        color: initial;
+    }
+    
+    #resto img {
+        width: 100%;
+        height: 100%;
+        background-color: #ebe3e3a2;
+    }
+    
+    #resto {
+        background-size: 100% auto;
+        padding-top: 200px;
+    }
+    
+    #resto[img=palette] {
+        background-image: url("./images/Palette.jpg");
+    }
+    
+    #resto[img=charonne] {
+        background-image: url("./images/note.jpg");
+    }
+    
+    #resto[img=citerouge] {
+        background-image: url(./images/française.jpg);
+    }
+    
+    #resto[img=mericourt] {
+        background-image: url(./images/delice.jpg);
+    }
+    
+    #resto section {
+        padding-left: 15px;
+    }
+    
+    #titre {
+        margin-top: 0;
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        font-size: 28px;
+        margin-left: 7px;
+    }
+    
+    #resto>div>div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px 0 15px;
+    }
+    
+    #resto>div {
+        background-color: #f6f6f6;
+        border-radius: 40px 40px 0 0;
+        padding-top: 35px;
+    }
+    
+    #resto i {
+        font-size: 25px;
+        padding-top: 8px;
+    }
+    
+    #resto i:hover {
+        font-weight: 900;
+        background: linear-gradient(180deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    section h2 {
+        font-weight: normal;
+        font-size: 20px;
+    }
+    
+    section span {
+        border-bottom: 3px solid #99E2D0;
+    }
+    
+    section>div {
+        background-color: white;
+        padding-left: 10px;
+        margin-right: 15px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        padding: 5px 15px 5px 10px;
+        -webkit-box-shadow: 10px -9px 8px 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 10px -9px 8px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    section h4 {
+        margin: 5px;
+        margin-bottom: 0;
+    }
+    
+    section p {
+        margin: 5px;
+    }
+    
+    .description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .description p {
+        font-weight: 600;
+    }
+    
+    .description p:first-of-type {
+        font-size: 15px;
+        font-weight: normal;
+    }
+    
+    .commande p {
+        width: 100%;
+        color: white;
+        margin: 20px 55px 50px 55px;
+        padding: 15px;
+        text-align: center;
+        -webkit-box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.20);
+        box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.20);
+        border: hidden rgba(147, 86, 220, 0.65);
+        border-radius: 25px;
+        background: #FF79DA;
+        background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
+        background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
+        background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
     }
