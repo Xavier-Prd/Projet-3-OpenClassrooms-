@@ -39,7 +39,11 @@
     
     #fonctionnement li {
         width: 300px;
-        font-size: 18px;
+        font-size: 20px;
+    }
+    
+    #fonctionnement i {
+        font-size: 25px;
     }
     
     #fonctionnement li:first-of-type {
@@ -49,6 +53,19 @@
     #deguster li {
         width: 650px;
         margin-top: 15px;
+        position: relative;
+    }
+    
+    #deguster i {
+        position: absolute;
+        left: 120px;
+        top: 18px;
+    }
+    
+    #deguster span {
+        position: absolute;
+        right: 220px;
+        top: 23px;
     }
     
     #carte {
@@ -72,7 +89,11 @@
         padding-left: 100px;
     }
     
+    #footer img {
+        width: 140px;
+    }
+    
     #footer li {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 5px;
     }
