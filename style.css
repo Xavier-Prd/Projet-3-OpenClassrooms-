@@ -45,6 +45,7 @@
         background-color: #f4f4f4;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding-bottom: 50px;
     }
     
@@ -67,7 +68,7 @@
         -webkit-box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.55);
         box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.55);
         border: hidden rgba(147, 86, 220, 0.65);
-        border-radius: 25px;
+        border-radius: 30px;
         background: -moz-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: -webkit-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: linear-gradient(135deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
@@ -97,7 +98,7 @@
         animation: fade-up 500ms ease-out;
     }
     
-    #fonctionnement li:last-child {
+    #deguster li {
         background-color: rgba(223, 216, 233, 255);
     }
     
@@ -214,7 +215,7 @@
     
     #footer {
         background-color: #1c1f1d;
-        padding: 20px 0 20px 20px;
+        padding: 20px 0 25px 20px;
     }
     
     #footer li {
@@ -222,6 +223,7 @@
         display: flex;
         flex-direction: row;
         padding-bottom: 5px;
+        margin: 0;
     }
     
     #footer i {

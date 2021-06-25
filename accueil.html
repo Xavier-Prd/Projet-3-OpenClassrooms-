@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/01a79fe669.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" media="screen and (max-width: 460px)" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (min-width : 1224px)" href="desktop.css">
+    <link rel="stylesheet" media="screen and (min-width : 768px) and (max-width : 1024px)" href="tablet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@1,400&display=swap" rel="stylesheet">
     <title>OhMyFood Accueil</title>
@@ -31,63 +33,67 @@
             <ul>
                 <li><i class="fas fa-mobile-alt"></i> Choisissez un restaurant</li>
                 <li><i class="fas fa-list-ul"></i> Composez votre menu </li>
-                <li><i class="fas fa-store"></i> Dégustez au restaurant </li>
+                <div id="deguster">
+                    <li> <i class="fas fa-store"></i> Dégustez au restaurant </li>
+                </div>
             </ul>
         </div>
     </header>
     <main id="carte">
         <h2>Restaurants</h2>
-        <div class="menu">
-            <a href="menilmontant.html">
-                <div class="menu-image">
-                    <img src="images/Palette.jpg" alt="la palette du gout">
-                    <span>Nouveau</span>
-                </div>
-                <div class="menu-texte">
-                    <h4>La palette du goût</h4>
-                    <i class="fas fa-heart"></i>
-                    <p>Ménilmontant</p>
-                </div>
-            </a>
-        </div>
-        <div class="menu">
-            <a href="charonne.html">
-                <div class="menu-image">
-                    <img src="images/note.jpg" alt="la note enchantée">
-                    <span>Nouveau</span>
-                </div>
-                <div class="menu-texte">
-                    <h4>La note enchantée</h4>
-                    <i class="fas fa-heart"></i>
-                    <p>Charonne</p>
-                </div>
+        <div>
+            <div class="menu">
+                <a href="menilmontant.html">
+                    <div class="menu-image">
+                        <img src="images/Palette.jpg" alt="la palette du gout">
+                        <span>Nouveau</span>
+                    </div>
+                    <div class="menu-texte">
+                        <h4>La palette du goût</h4>
+                        <i class="fas fa-heart"></i>
+                        <p>Ménilmontant</p>
+                    </div>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="charonne.html">
+                    <div class="menu-image">
+                        <img src="images/note.jpg" alt="la note enchantée">
+                        <span>Nouveau</span>
+                    </div>
+                    <div class="menu-texte">
+                        <h4>La note enchantée</h4>
+                        <i class="fas fa-heart"></i>
+                        <p>Charonne</p>
+                    </div>
 
-            </a>
-        </div>
-        <div class="menu">
-            <a href="citerouge.html">
-                <div class="menu-image">
-                    <img src="images/française.jpg" alt="a la française">
-                </div>
-                <div class="menu-image">
-                    <h4>À la française</h4>
-                    <i class="fas fa-heart"></i>
-                    <p>Cité Rouge</p>
-                </div>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="citerouge.html">
+                    <div class="menu-image">
+                        <img src="images/française.jpg" alt="a la française">
+                    </div>
+                    <div class="menu-image">
+                        <h4>À la française</h4>
+                        <i class="fas fa-heart"></i>
+                        <p>Cité Rouge</p>
+                    </div>
 
-            </a>
-        </div>
-        <div class="menu">
-            <a href="mericourt.html">
-                <div class="menu-image">
-                    <img src="images/delice.jpg" alt="le délice des sens">
-                </div>
-                <div class="menu-image">
-                    <h4>Le délice des sens</h4>
-                    <i class="fas fa-heart"></i>
-                    <p>Folie-Méricourt</p>
-                </div>
-            </a>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="mericourt.html">
+                    <div class="menu-image">
+                        <img src="images/delice.jpg" alt="le délice des sens">
+                    </div>
+                    <div class="menu-image">
+                        <h4>Le délice des sens</h4>
+                        <i class="fas fa-heart"></i>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </main>
     <footer id="footer">

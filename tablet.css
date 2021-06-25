@@ -1,0 +1,78 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #logo img {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    
+    #localisation {
+        font-size: 18px;
+        height: 50px;
+    }
+    
+    #description p:nth-child(3) {
+        width: 450px;
+        height: 30px;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    
+    #fonctionnement h2 {
+        margin-top: 10px;
+    }
+    
+    #fonctionnement ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #fonctionnement li {
+        width: 300px;
+        font-size: 18px;
+    }
+    
+    #fonctionnement li:first-of-type {
+        margin-right: 50px;
+    }
+    
+    #deguster li {
+        width: 650px;
+        margin-top: 15px;
+    }
+    
+    #carte {
+        margin-top: 40px;
+        padding-bottom: 50px;
+    }
+    
+    #carte div:first-of-type {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #carte img {
+        width: 330px;
+        height: 200px;
+    }
+    
+    #footer {
+        padding-left: 100px;
+    }
+    
+    #footer li {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
