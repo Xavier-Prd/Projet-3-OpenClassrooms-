@@ -24,9 +24,11 @@
             <p>Paris,Belleville</p>
         </div>
         <div id="description">
-            <h3>Réservez le menu qui vous convient</h3>
-            <p>Découvrez des restaurants d'exception,séléctionnés par nos soins.</p>
-            <p><span>Explorer nos restaurants</span></p>
+            <div>
+                <h3>Réservez le menu qui vous convient</h3>
+                <p>Découvrez des restaurants d'exception,séléctionnés par nos soins.</p>
+            </div>
+            <p id="explorer"><span>Explorer nos restaurants</span></p>
         </div>
         <div id="fonctionnement">
             <h2>Fonctionnement</h2>
@@ -42,6 +44,7 @@
     <main id="carte">
         <h2>Restaurants</h2>
         <div>
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
             <div class="menu">
                 <a href="menilmontant.html">
                     <div class="menu-image">
@@ -94,10 +97,12 @@
                     </div>
                 </a>
             </div>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </div>
     </main>
     <footer id="footer">
         <div><img src="images/ohmyfood.png" alt="logo ohmyfood"></div>
+        <div class="bar"></div>
         <ul>
             <li>
                 <i class="fas fa-utensils"></i>
@@ -107,7 +112,7 @@
                 <i class="fas fa-hands-helping"></i>
                 <p class="info">Devenir partenaire</p>
             </li>
-            <li>
+            <li id="mention">
                 <p>Mentions légales</p>
             </li>
             <li>

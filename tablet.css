@@ -20,7 +20,7 @@
         height: 50px;
     }
     
-    #description p:nth-child(3) {
+    #explorer {
         width: 450px;
         height: 30px;
         font-size: 18px;
@@ -38,7 +38,7 @@
     }
     
     #fonctionnement li {
-        width: 300px;
+        width: 44%;
         font-size: 20px;
     }
     
@@ -50,22 +50,19 @@
         margin-right: 50px;
     }
     
-    #deguster li {
-        width: 650px;
-        margin-top: 15px;
-        position: relative;
+    #deguster {
+        width: 100%;
     }
     
-    #deguster i {
-        position: absolute;
-        left: 120px;
-        top: 18px;
+    #deguster li {
+        width: 95%;
+        margin-top: 15px;
     }
     
     #deguster span {
-        position: absolute;
-        right: 220px;
-        top: 23px;
+        display: inline-block;
+        width: 80%;
+        text-align: center;
     }
     
     #carte {
@@ -81,7 +78,7 @@
     }
     
     #carte img {
-        width: 330px;
+        width: 340px;
         height: 200px;
     }
     
