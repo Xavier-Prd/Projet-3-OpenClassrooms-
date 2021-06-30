@@ -50,11 +50,7 @@
         margin-right: 50px;
     }
     
-    #deguster {
-        width: 100%;
-    }
-    
-    #deguster li {
+    li#deguster {
         width: 95%;
         margin-top: 15px;
     }

@@ -99,7 +99,7 @@
         animation: fade-up 500ms ease-out;
     }
     
-    #deguster li {
+    li#deguster {
         background-color: rgba(223, 216, 233, 255);
     }
     
@@ -289,19 +289,19 @@
         padding-top: 200px;
     }
     
-    #resto[img=palette] {
+    #resto[data-menu=palette] {
         background-image: url("./images/Palette.jpg");
     }
     
-    #resto[img=charonne] {
+    #resto[data-menu=charonne] {
         background-image: url("./images/note.jpg");
     }
     
-    #resto[img=citerouge] {
+    #resto[data-menu=citerouge] {
         background-image: url(./images/française.jpg);
     }
     
-    #resto[img=mericourt] {
+    #resto[data-menus=mericourt] {
         background-image: url(./images/delice.jpg);
     }
     
