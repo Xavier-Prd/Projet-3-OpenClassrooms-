@@ -2,11 +2,50 @@
     @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     * {
         font-family: 'Roboto', sans-serif;
+        transition: ease-in-out 0.2s;
     }
     
     body {
         margin: 0;
         height: 100%;
+    }
+    
+    @keyframes loadingCircle {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+    
+    @keyframes loadingFade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    
+    #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        animation: loadingFade 300ms 2s forwards;
+    }
+    
+    #loading img {
+        animation: loadingCircle 1s infinite linear;
+        width: 100px;
+        height: auto;
     }
     
     #logo img {
@@ -73,6 +112,15 @@
         background: -moz-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: -webkit-linear-gradient(-45deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
         background: linear-gradient(135deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 69%, rgb(147, 86, 220) 100%);
+    }
+    
+    #explorer:hover {
+        background: linear-gradient(-45deg, rgb(250, 151, 222) 0%, rgb(159, 110, 218) 69%, rgb(154, 103, 216) 100%);
+        background: -webkit-linear-gradient(-45deg, rgb(250, 151, 222) 0%, rgb(159, 110, 218) 69%, rgb(154, 103, 216) 100%);
+        background: -moz-linear-gradient(135deg, rgb(250, 151, 222) 0%, rgb(159, 110, 218) 69%, rgb(154, 103, 216) 100%);
+        -webkit-box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.60);
+        box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.60);
+        transform: translateY(5%);
     }
     
     #fonctionnement h2 {
@@ -204,19 +252,32 @@
         display: none;
     }
     
-    #carte .fas.fa-heart {
+    .fa-heart {
         font-size: 28px;
-        font-weight: 100;
+        cursor: pointer;
+        transition: 500ms;
+    }
+    
+    #carte .fa-heart {
         position: absolute;
         right: 30px;
         top: 10px;
     }
     
-    #carte .fas.fa-heart:hover {
-        font-weight: 900;
+    .fas.fa-heart {
         background: linear-gradient(180deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        transform: scale(0);
+    }
+    
+    .far.fa-heart:hover+.fas.fa-heart,
+    .far.fa-heart:active+.fas.fa-heart,
+    .fas.fa-heart:active,
+    .fas.fa-heart:hover {
+        transform: scale(1.1);
+        transition: 200ms cubic-bezier(0.15, 1.03, .51, 1.79);
     }
     
     .menu div {
@@ -318,9 +379,8 @@
     }
     
     #resto>div>div:first-of-type {
-        display: flex;
-        justify-content: space-between;
         padding: 0 40px 0 15px;
+        position: relative;
     }
     
     #menucarte {
@@ -330,22 +390,67 @@
         padding: 0 40px 0 15px;
     }
     
+    @keyframes menuAppear {
+        0% {
+            opacity: 0;
+            transform: translateX(-5%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    
+    .entrees {
+        animation: menuAppear 1s 0.5s backwards;
+    }
+    
+    .plats {
+        animation: menuAppear 1s 1s backwards;
+    }
+    
+    .desserts {
+        animation: menuAppear 1s 1.5s backwards;
+    }
+    
     #resto>div {
         background-color: #f6f6f6;
         border-radius: 40px 40px 0 0;
         padding-top: 35px;
     }
     
-    #resto i {
-        font-size: 25px;
-        padding-top: 8px;
+    #resto .fa-heart {
+        position: absolute;
+        right: 30px;
+        top: 7px;
     }
     
-    #resto i:hover {
-        font-weight: 900;
-        background: linear-gradient(180deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    .check {
+        background-color: #99E2D0;
+        font-size: 1.35rem;
+        width: 0%;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scaleX(0);
+        transform-origin: right;
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    .check i {
+        color: white;
+        transform: rotateZ(0deg);
+        transition: 750ms 150ms;
+    }
+    
+    section>div:hover .check {
+        transform: scale(1);
+        width: 21%;
+    }
+    
+    section>div:hover .check i {
+        transform: rotateZ(360deg);
     }
     
     section h2 {
@@ -359,18 +464,29 @@
     
     section>div {
         background-color: white;
-        padding-left: 10px;
+        display: flex;
         margin-right: 15px;
         border-radius: 15px;
         margin-bottom: 15px;
-        padding: 5px 15px 5px 10px;
         -webkit-box-shadow: 10px -9px 8px 5px rgba(0, 0, 0, 0.05);
         box-shadow: 10px -9px 8px 5px rgba(0, 0, 0, 0.05);
+        align-items: center;
+    }
+    
+    section>div>div {
+        width: 100%;
+        padding: 0 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     
     section h4 {
         margin: 5px;
         margin-bottom: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     
     section p {
@@ -390,6 +506,9 @@
     .description p:first-of-type {
         font-size: 15px;
         font-weight: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     
     #commande {
@@ -402,12 +521,21 @@
         margin: 20px 55px 50px 55px;
         padding: 15px;
         text-align: center;
-        -webkit-box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.20);
-        box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.20);
-        border: hidden rgba(147, 86, 220, 0.65);
+        -webkit-box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.30);
+        box-shadow: 2px 17px 26px -3px rgba(0, 0, 0, 0.30);
         border-radius: 25px;
         background: #FF79DA;
         background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
         background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
         background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%, #9356DC 100%);
+        cursor: pointer;
+    }
+    
+    #commande p:hover {
+        background: linear-gradient(to bottom, #f88eda 0%, #9662d4 100%, #9865d6 100%);
+        background: -moz-linear-gradient(top, #f88eda 0%, #9662d4 100%, #9865d6 100%);
+        background: -webkit-linear-gradient(top, #f88eda 0%, #9662d4 100%, #9865d6 100%);
+        -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.50);
+        box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.50);
+        transform: translateY(15%);
     }

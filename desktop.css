@@ -35,6 +35,7 @@ header {
 #explorer {
     width: 30%;
     height: fit-content;
+    cursor: pointer;
 }
 
 #description {

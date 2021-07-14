@@ -66,7 +66,7 @@
         padding-bottom: 50px;
     }
     
-    #carte div:first-of-type {
+    #carte>div:first-of-type {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
